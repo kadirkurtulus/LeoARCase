@@ -4,6 +4,7 @@ import { View, StyleSheet } from 'react-native'
 
 import Header from './Header'
 import FloatingMenu from './FloatingMenu'
+import List from './List'
 
 const App = () => {
   // const insets = useSafeAreaInsets()
@@ -12,6 +13,7 @@ const App = () => {
 
       <Header />
       <FloatingMenu />
+      <List />
 
     </View>
   )
