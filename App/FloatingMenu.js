@@ -20,16 +20,19 @@ const App = () => {
     { id: 11, label: 'Pop' },
   ]
 
-  const renderItem = ({ item, index }) => (//4c4c4c
-    <TouchableOpacity onPress={() => setSelectedItem(index)}>
-      <Text style={{ fontSize: 16, fontWeight: '500', color: '#c0c0c0' }}>
-        {item.label}
-      </Text>
-      {index === selectedItem &&
-        <View style={{ height: 1, backgroundColor: 'black', marginTop: 15 }} />
-      }
-    </TouchableOpacity>
-  )
+  const renderItem = ({ item, index }) => {
+    let isSelected = index === selectedItem
+    return (
+      <TouchableOpacity onPress={() => setSelectedItem(index)}>
+        <Text style={{ fontSize: 16, fontWeight: '500', color: isSelected ? '#4c4c4c' : '#c0c0c0' }}>
+          {item.label}
+        </Text>
+        {isSelected &&
+          <View style={{ height: 1, backgroundColor: 'black', marginTop: 15 }} />
+        }
+      </TouchableOpacity>
+    )
+  }
 
   return (
     <View style={{ ...styles.container, backgroundColor: '#f5f5f5' }}>
