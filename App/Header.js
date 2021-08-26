@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 
 
 const App = () => {
- 
+
   return (
     <View style={styles.container}>
       <Text>Cancel</Text>
@@ -17,7 +17,11 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 20
+    padding: 20,
+    backgroundColor:'#f6f6f6',
+    paddingTop:60
+    // borderBottomColor: 'darkgray',
+    // borderBottomWidth: 1
   },
   text: {
     fontSize: 16,
