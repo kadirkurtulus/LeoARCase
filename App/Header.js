@@ -1,11 +1,14 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 const App = () => {
 
+  const insets = useSafeAreaInsets()
+
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, paddingTop: insets.top }}>
       <Text>Cancel</Text>
       <Text style={styles.text}>Choose Music</Text>
       <Text>Done</Text>
@@ -18,8 +21,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 20,
-    backgroundColor:'#f6f6f6',
-    paddingTop:60
+    backgroundColor: '#f6f6f6',
+    // paddingTop: 60
     // borderBottomColor: 'darkgray',
     // borderBottomWidth: 1
   },
